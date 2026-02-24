@@ -1,0 +1,236 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Grid.css";
+
+// ✅ Helper to convert any hex color to RGBA safely
+const hexToRgba = (hex, alpha = 0.25) => {
+  let r = 0,
+    g = 0,
+    b = 0;
+  if (hex.length === 4) {
+    // #RGB
+    r = parseInt(hex[1] + hex[1], 16);
+    g = parseInt(hex[2] + hex[2], 16);
+    b = parseInt(hex[3] + hex[3], 16);
+  } else if (hex.length === 7 || hex.length === 9) {
+    // #RRGGBB or #RRGGBBAA
+    r = parseInt(hex.slice(1, 3), 16);
+    g = parseInt(hex.slice(3, 5), 16);
+    b = parseInt(hex.slice(5, 7), 16);
+  }
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
+const cardData = [
+  {
+    image: "https://ahaanmedia.com/ahaanwebsite/Service/card1.webp",
+    title: "UI/UX Design",
+    description:
+      "UI/UX demands a deep understanding of online customer behaviour and continuous testing. With real market insights from diverse projects, we craft dynamic websites and mobile apps that deliver seamless, engaging brand interactions.",
+    features: [
+      "Graphic",
+      "Wireframing",
+      "Web app",
+      "Architecture",
+      "Mobile App",
+    ],
+    icons: [
+      "https://ahaanmedia.com/ahaanwebsite/technology/Adobe.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Canva.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Framer.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Figma.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Photoshop.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Wix.webp",
+    ],
+    color: "#ff4d4d",
+  },
+  {
+    image: "https://ahaanmedia.com/ahaanwebsite/Service/card2.webp",
+    title: "Web Development",
+    description:
+      "Content is king, but your website is the castle! Build a dynamic “digital empire” for your brand with a visually captivating, SEO-friendly, feature-loaded, and mobile-responsive website – crafted by our expert team.",
+    features: [
+      "Frontend",
+      "Backend",
+      "API & Integration",
+      "WordPress",
+      "Shopify",
+      "Mern Stack",
+    ],
+    icons: [
+      "https://ahaanmedia.com/ahaanwebsite/technology/Next.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/React.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Node.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/JS.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Nuxt.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/HTML.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/CSS.webp",
+    ],
+    color: "#9a4dff",
+  },
+  {
+    image: "https://ahaanmedia.com/ahaanwebsite/Service/card3.webp",
+    title: "Application Development",
+    description:
+      "Grow and promote your business on the go with a robust, custom-tailored mobile app. Leveraging cutting-edge technology, we build iOS, Android, and hybrid solutions designed for more engagement, better scalability, and greater performance.",
+    features: ["Hybrid App", "Native App", "React Native", "Kotlin", "Flutter"],
+    icons: [
+      "https://ahaanmedia.com/ahaanwebsite/technology/React.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Node.webp",
+    ],
+    color: "#00b894",
+  },
+  {
+    image: "https://ahaanmedia.com/ahaanwebsite/Service/card4.webp",
+    title: "E-commerce Development",
+    description:
+      "Boost sales and elevate customer satisfaction with our expert e-commerce web development solutions. We craft secure, high-performing stores with robust strategies to expand your customer base and drive measurable results that strengthen your online presence, increase brand visibility, and ensure consistent business growth worldwide.",
+    features: ["Shopify", "Magento", "WooCommerce", "BigCommerce"],
+    icons: [
+      "https://ahaanmedia.com/ahaanwebsite/technology/Wordpress.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Shopify.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Webflow.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Magento.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Odoo.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Woo.webp",
+    ],
+    color: "#e15594ff",
+  },
+  {
+    image: "https://ahaanmedia.com/ahaanwebsite/Service/card5.webp",
+    title: "Social Media Management",
+    description:
+      "We go beyond likes, comments, and shares to craft well-researched, insight-driven, and sustainable content strategies that truly resonate with your audience. Trust us to spark meaningful conversations, foster a genuine community, and make real impact!",
+    features: [
+      "Instagram Marketing",
+      "LinkedIn Marketing",
+      "Social Media Reputation",
+      "Social Media Analytics",
+    ],
+    icons: [
+      "https://ahaanmedia.com/ahaanwebsite/technology/Instagram.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Linkedin.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Youtube.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Google.webp",
+    ],
+    color: "#0984e3",
+  },
+  {
+    image: "https://ahaanmedia.com/ahaanwebsite/Service/card6.webp",
+    title: "Google Marketing",
+    description:
+      "Guesswork wastes money—your business deserves better! Our Google Ads experts have mastered the art of high-performing campaigns. With data-driven precision, we optimize keywords, streamline chaotic account structures, and craft compelling copy and creatives. The result? Ad campaigns that don’t just run—they dominate!",
+    features: [
+      "Google Ads",
+      "Google Shopping",
+      "Google Video Ads",
+      "Google Analytics",
+    ],
+    icons: [
+      "https://ahaanmedia.com/ahaanwebsite/technology/Google.webp",
+      "https://ahaanmedia.com/ahaanwebsite/technology/Gmail.webp",
+    ],
+    color: "#f9a825",
+  },
+];
+
+const Grid = () => {
+  return (
+   <div className="container my-5 service-section">
+      {cardData.map((service, index) => {
+        const IconList = service.icons.map((url, i) => (
+          <div
+            key={i}
+            className="icon-bubble"
+            style={{ "--icon-color": service.color }}
+          >
+            <img
+              src={url}
+              alt="tech icon"
+              className="service-tech-icon"
+              loading="lazy"
+            />
+          </div>
+        ));
+
+        const isReverse = index % 2 !== 0;
+
+        return (
+          <div
+            key={service.title}
+            className={`row align-items-center my-5 ${
+              isReverse ? "flex-md-row-reverse" : ""
+            }`}
+          >
+            {/* Image Column */}
+            <div className="col-md-5">
+              <div
+                className="service-image-box"
+                style={{
+                  "--border-color": service.color,
+                  background: `linear-gradient(135deg, ${hexToRgba(
+                    service.color,
+                    0.25
+                  )}, #ffffff00)`,
+                  padding: "30px",
+                }}
+              >
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="img-fluid service-image"
+                />
+              </div>
+            </div>
+
+            {/* Content Column */}
+            <div className="col-md-7">
+              <div className="service-content px-3 mt-4 mt-md-0">
+                <h1
+                  className="service-title animated-heading"
+                  style={{ "--main-color": service.color }}
+                >
+                  {service.title}
+                </h1>
+
+                <div className="tech-stack mb-2">
+                  {service.features.map((item, i) => (
+                    <span key={i}>
+                      {item}
+                      {i < service.features.length - 1 && (
+                        <span className="dot"> • </span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+
+                <p className="service-description">{service.description}</p>
+
+                <div className="button-icon-row d-flex align-items-center gap-3">
+                  <Link
+                    to="/portfolio"
+                    className="btn explore-btn"
+                    style={{
+                      borderColor: service.color,
+                      color: service.color,
+                      borderStyle: 'solid',
+                      borderWidth: '1px'
+                    }}
+                  >
+                    Explore More
+                  </Link>
+
+                  <div className="service-icons d-flex flex-wrap">
+                    {IconList}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Grid;

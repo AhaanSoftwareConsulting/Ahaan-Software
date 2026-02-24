@@ -1,0 +1,77 @@
+import React from "react";
+// Removed Container, Row, Col, Card from react-bootstrap
+import "./TabContent.css";
+
+const gridcontent = [
+  {
+    imgSrc: "https://ahaanmedia.com/ahaanwebsite/Industry/grids-image1.webp",
+    title: 'Supply Chain Management Solutions',
+    description: 'Enhance efficiency, visibility, and coordination across your supply chain with real-time tracking, demand forecasting, and AI-powered analytics.'
+  },
+  {
+    imgSrc: "https://ahaanmedia.com/ahaanwebsite/Industry/grids-image2.webp",
+    title: 'Fleet & Transportation Management',
+    description: 'Optimize route planning, reduce fuel costs, and boost fleet performance with GPS tracking, automated dispatching, predictive maintenance solutions, and more! '
+  },
+  {
+    imgSrc: "https://ahaanmedia.com/ahaanwebsite/Industry/grids-image3.webp",
+    title: 'Warehouse & Inventory Management',
+    description: 'Improve inventory accuracy, reduce storage costs, and streamline warehouse operations with IoT-enabled tracking, automated stock management, and cloud-based solutions.'
+  },
+  {
+    imgSrc: "https://ahaanmedia.com/ahaanwebsite/Industry/grids-image4.webp",
+    title: 'Last-Mile Delivery Optimization',
+    description: 'Ensure faster, more efficient deliveries with AI-driven route optimization, real-time tracking, and automated proof-of-delivery solutions.'
+  },
+];
+
+const Logistics = () => {
+  return (
+    <div className="ecommerce-section container-fluid p-0">
+      <h2 className="fw-bold">On The Road To Transformation With Future-Ready Logistics </h2>
+      <p className="text-muted">
+        By harnessing the power of logistics, transportation, and digital innovation, industry leaders are gaining real-time visibility into their supply chains, accessing critical data instantly, and accelerating order fulfillment worldwide. We help you leap ahead by leveraging the latest technologies like machine learning, IoT, blockchain, and predictive analytics for smarter, more efficient logistics operations.
+      </p>
+      
+      <img 
+        src="https://ahaanmedia.com/ahaanwebsite/Industry/Logistics.webp" 
+        alt="Logistics Solutions" 
+        className="img-fluid content-image mb-4 w-100" 
+      />
+
+      <h2 className="fw-bold text-start Revitalize mt-3">
+        Leap Ahead In The Modern Logistics Ecosystem 
+      </h2>
+      <p className="text-start text-muted">
+        Driven by quality and results, we modernize even the most complex logistical systems with advanced, data-driven solutions! Our targeted digital transportation technology solutions empower providers for unparalleled growth and limitless success.
+      </p>
+
+      <h2 className="fw-bold text-start Revitalize mt-4 mb-4">
+        Compete Against Industry Giants With Our Solutions 
+      </h2>
+
+      {gridcontent.map((feature, index) => (
+        <div className="row mb-5 align-items-center" key={index}>
+          {/* Image Column */}
+          <div className={`col-12 col-md-6 ${index % 2 === 1 ? 'order-md-2 order-1' : 'order-md-1 order-1'}`}>
+            <img 
+              src={feature.imgSrc} 
+              alt={feature.title} 
+              className="img-fluid mb-3 rounded shadow-sm" 
+            />
+          </div>
+
+          {/* Text Column */}
+          <div className={`col-12 col-md-6 ${index % 2 === 1 ? 'order-md-1 order-2' : 'order-md-2 order-2'}`}>
+            <div className="py-2">
+              <h2 className="grids-heading">{feature.title}</h2>
+              <p className="grids-content text-muted">{feature.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Logistics;

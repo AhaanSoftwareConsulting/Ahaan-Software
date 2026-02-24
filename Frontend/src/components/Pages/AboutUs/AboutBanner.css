@@ -1,0 +1,197 @@
+/* ============================================================= */
+/* ====================== GLOBAL RESET ======================== */
+/* ============================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================================= */
+/* ====================== ABOUT BANNER ======================== */
+/* ============================================================= */
+
+.about-banner-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin-top: -120px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.about-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.about-banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about-banner-text {
+  max-width: 900px;
+}
+
+.about-banner-heading {
+  font-size: clamp(30px, 5vw, 60px);
+  font-weight: 700;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.about-banner-subtitle {
+  font-size: clamp(14px, 2vw, 20px);
+  color: #f1f1f1;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 700px;
+}
+
+/* ============================================================= */
+/* ====================== BELOW BANNER ======================== */
+/* ============================================================= */
+
+.title {
+  font-size: 50px !important;
+  font-weight: 700;
+  background: linear-gradient(40deg, #f9ae00, #3d2f0c, #d49500);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 4s ease-in-out infinite;
+  font-family: "Outfit", sans-serif;
+  line-height: 47px;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Outfit", sans-serif;
+  line-height: 40px;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Outfit", sans-serif;
+  text-align: left;
+}
+
+.mission-title,
+.vision-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+  font-family: "Outfit", sans-serif;
+}
+
+.img-fluid {
+  width: 100%;
+  max-width: 570px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.team-discus-mobile {
+  display: none;
+}
+
+/* Subtitle Divider */
+.section-header {
+  margin-bottom: 1rem;
+}
+
+.section-header .subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.section-header .divider {
+  display: inline-block;
+  width: 0;
+  height: 3px;
+  background: #ffbf00;
+  margin-left: 10px;
+  vertical-align: middle;
+  animation: expandLine 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes expandLine {
+  0% { width: 0; opacity: 0.5; }
+  100% { width: 50px; opacity: 1; }
+}
+
+/* ============================================================= */
+/* ====================== RESPONSIVE ========================== */
+/* ============================================================= */
+
+/* Tablet */
+@media (max-width: 991px) {
+  .about-banner-section {
+    height: 480px;
+    margin-top: -100px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+/* ================= MOBILE PERFECT BALANCE ================= */
+
+@media (max-width: 768px) {
+  .team-discus-desktop { display: none; }
+  .team-discus-mobile { display: block; }
+
+  .about-banner-section {
+    height: 420px;
+    margin-top: -90px;
+    align-items: center;
+  }
+
+  .about-banner-text {
+    transform: translateY(35px);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-banner-section {
+    height: 440px;
+    margin-top: -80px;
+  }
+
+  .about-banner-text {
+    transform: translateY(45px);
+  }
+
+  .about-banner-heading {
+    line-height: 1.3;
+  }
+
+  .about-banner-subtitle {
+    font-size: 1rem;
+  }
+}

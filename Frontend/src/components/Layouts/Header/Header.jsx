@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { a } from "react-router-dom";
 import "./Header.css";
-import { FiPhoneCall, FiMessageSquare  } from "react-icons/fi"; // Phone icon add kora hoyeche
+import { FiPhoneCall, FiMessageSquare } from "react-icons/fi"; // Phone icon add kora hoyeche
 import MobileSidebar from "./MobileSidebar";
 import MenuToggle from "./MenuToggle";
 
@@ -117,7 +117,7 @@ const Header = () => {
               <div className="get-quote-container-1">
                 {isMobile ? (
                   <a href="#" onClick={openCallWidget} style={{ padding: 0 }}>
-                    <FiMessageSquare  size={32} className="phone-get-qt" />
+                    <FiMessageSquare size={32} className="phone-get-qt" />
                   </a>
                 ) : (
                   <a

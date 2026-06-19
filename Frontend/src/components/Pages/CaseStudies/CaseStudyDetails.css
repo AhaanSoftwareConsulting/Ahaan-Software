@@ -30,8 +30,8 @@
   object-fit: cover;
 
   box-shadow:
-    -20px 20px 30px rgba(0, 0, 0, 0.7),
-    -35px 35px 30px rgba(135, 135, 135, 0.7);
+    -20px 20px 30px rgba(0, 0, 0, 0.4),
+    -35px 35px 30px rgba(135, 135, 135, 0.4);
 }
 
 /* Tablet */
@@ -72,7 +72,6 @@
   }
 }
 
-
 /* Challenges Section */
 
 .challenges-section {
@@ -98,8 +97,8 @@
   object-fit: cover;
 
   box-shadow:
-    -20px 20px 30px rgba(0, 0, 0, 0.7),
-    -35px 35px 30px rgba(135, 135, 135, 0.7);
+    -20px 20px 30px rgba(0, 0, 0, 0.4),
+    -35px 35px 30px rgba(135, 135, 135, 0.4);
 }
 
 .challenges-section ul {
@@ -252,13 +251,13 @@
 }
 
 .key-benefits-section img {
-    width: 100%;
+  width: 100%;
   border-radius: 20px;
   object-fit: cover;
 
   box-shadow:
-    -20px 20px 30px rgba(0, 0, 0, 0.7),
-    -35px 35px 30px rgba(135, 135, 135, 0.7);
+    -20px 20px 30px rgba(0, 0, 0, 0.4),
+    -35px 35px 30px rgba(135, 135, 135, 0.4);
 }
 
 .key-benefits-section ul {
@@ -368,7 +367,6 @@
   }
 }
 
-
 /* ===================================
    SOLUTION TIMELINE
 =================================== */
@@ -477,14 +475,14 @@
 }
 
 .solution-content img {
-    width: 100%;
-    max-width: 320px;
+  width: 100%;
+  max-width: 320px;
   border-radius: 20px;
   object-fit: cover;
 
   box-shadow:
-    -20px 20px 30px rgba(0, 0, 0, 0.7),
-    -35px 35px 30px rgba(135, 135, 135, 0.7);
+    -20px 20px 30px rgba(0, 0, 0, 0.4),
+    -35px 35px 30px rgba(135, 135, 135, 0.4);
 }
 
 /* Align Image */
@@ -619,8 +617,8 @@
 }
 
 .hero-feature-image {
-    width: 100%;
-    max-width: 200px;
+  width: 100%;
+  max-width: 200px;
   border-radius: 20px;
   object-fit: cover;
 
@@ -687,7 +685,7 @@
 .design-highlights-section h2,
 .project-details-section h2,
 .project-standout-section h2 {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 25px;
 }
@@ -710,13 +708,13 @@
 .business-impact-section img,
 .design-highlights-section img,
 .project-details-section img {
-    width: 100%;
+  width: 100%;
   border-radius: 20px;
   object-fit: cover;
 
   box-shadow:
-    -20px 20px 30px rgba(0, 0, 0, 0.7),
-    -35px 35px 30px rgba(135, 135, 135, 0.7);
+    -20px 20px 30px rgba(0, 0, 0, 0.4),
+    -35px 35px 30px rgba(135, 135, 135, 0.4);
 }
 
 .project-standout-section {

@@ -26,25 +26,12 @@
   max-width: 560px;
   display: block;
   margin-left: auto;
-  border-radius: 22px;
+  border-radius: 20px;
   object-fit: cover;
 
-  border-radius: 20px;
-  border: 1px solid transparent;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(90deg, #000000, #edb829, #edb602, #000000);
-  background-size: 300% 300%;
-  animation: borderAnimation 4s linear infinite;
-  padding: 5px; /* border thickness */
-}
-
-@keyframes borderAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
+  box-shadow:
+    -20px 20px 30px rgba(0, 0, 0, 0.7),
+    -35px 35px 30px rgba(135, 135, 135, 0.7);
 }
 
 /* Tablet */
@@ -85,65 +72,6 @@
   }
 }
 
-/* ClientSection */
-
-/* .client-background-section {
-  background: #fff;
-  padding: 80px 0;
-}
-
-
-.client-background-section h2 {
-  font-size: 32px;
-  font-weight: 800;
-  text-transform: capitalize;
-  color: #000000;
-  margin-bottom: 30px;
-}
-
-.client-background-section img {
-  width: 100%;
-  border-radius: 18px;
-  object-fit: cover;
-}
-
-.client-background-section ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.client-background-section li {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #111;
-  margin-bottom: 12px;
-}
-.client-background-section .col-lg-7 {
-  padding-left: 50px;
-} */
-
-/* Tablet */
-/* @media (max-width: 991px) {
-  .client-background-section h2 {
-    font-size: 36px;
-    margin-top: 30px;
-  }
-} */
-
-/* Mobile */
-/* @media (max-width: 767px) {
-  .client-background-section {
-    padding: 50px 0;
-  }
-
-  .client-background-section h2 {
-    font-size: 28px;
-  }
-
-  .client-background-section li {
-    font-size: 16px;
-  }
-} */
 
 /* Challenges Section */
 
@@ -166,24 +94,12 @@
 
 .challenges-section img {
   width: 100%;
-  border-radius: 18px;
-  object-fit: cover;
   border-radius: 20px;
-  border: 1px solid transparent;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(90deg, #000000, #edb829, #edb602, #000000);
-  background-size: 300% 300%;
-  animation: borderAnimation 4s linear infinite;
-  padding: 5px; /* border thickness */
-}
+  object-fit: cover;
 
-@keyframes borderAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
+  box-shadow:
+    -20px 20px 30px rgba(0, 0, 0, 0.7),
+    -35px 35px 30px rgba(135, 135, 135, 0.7);
 }
 
 .challenges-section ul {
@@ -336,25 +252,13 @@
 }
 
 .key-benefits-section img {
-  width: 100%;
-  border-radius: 18px;
-  object-fit: cover;
+    width: 100%;
   border-radius: 20px;
-  border: 1px solid transparent;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(90deg, #000000, #edb829, #edb602, #000000);
-  background-size: 300% 300%;
-  animation: borderAnimation 4s linear infinite;
-  padding: 5px; /* border thickness */
-}
+  object-fit: cover;
 
-@keyframes borderAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
+  box-shadow:
+    -20px 20px 30px rgba(0, 0, 0, 0.7),
+    -35px 35px 30px rgba(135, 135, 135, 0.7);
 }
 
 .key-benefits-section ul {
@@ -464,72 +368,6 @@
   }
 }
 
-/* CONCLUSION SECTION */
-
-/* .conclusion-section {
-  background: #f3f3f3;
-  padding: 80px 0;
-}
-
-.conclusion-row {
-  --bs-gutter-x: 5rem;
-}
-
-
-.conclusion-section h2 {
-  font-size: 32px;
-  font-weight: 800;
-  text-transform: capitalize;
-  color: #000;
-  margin-bottom: 30px;
-}
-
-.conclusion-section img {
-  width: 100%;
-  border-radius: 18px;
-  object-fit: cover;
-}
-
-.conclusion-section ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.conclusion-section li {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #111;
-  margin-bottom: 12px;
-} */
-
-/* Tablet */
-
-/* @media (max-width: 991px) {
-  .conclusion-section h2 {
-    font-size: 28px;
-    margin-top: 30px;
-  }
-
-  .conclusion-row {
-    --bs-gutter-x: 2rem;
-  }
-} */
-
-/* Mobile */
-
-/* @media (max-width: 767px) {
-  .conclusion-section {
-    padding: 50px 0;
-  }
-
-  .conclusion-section h2 {
-    font-size: 24px;
-  }
-
-  .conclusion-section li {
-    font-size: 16px;
-  }
-} */
 
 /* ===================================
    SOLUTION TIMELINE
@@ -639,27 +477,14 @@
 }
 
 .solution-content img {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 14px;
+    width: 100%;
+    max-width: 320px;
+  border-radius: 20px;
   object-fit: cover;
 
-  border-radius: 20px;
-  border: 1px solid transparent;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(90deg, #000000, #edb829, #edb602, #000000);
-  background-size: 300% 300%;
-  animation: borderAnimation 4s linear infinite;
-  padding: 5px; /* border thickness */
-}
-
-@keyframes borderAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
+  box-shadow:
+    -20px 20px 30px rgba(0, 0, 0, 0.7),
+    -35px 35px 30px rgba(135, 135, 135, 0.7);
 }
 
 /* Align Image */
@@ -794,25 +619,14 @@
 }
 
 .hero-feature-image {
-  width: 100%;
-  max-width: 250px;
+    width: 100%;
+    max-width: 200px;
+  border-radius: 20px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(90deg, #000000, #edb829, #edb602, #000000);
-  background-size: 300% 300%;
-  animation: borderAnimation 4s linear infinite;
-  padding: 5px; /* border thickness */
-}
 
-@keyframes borderAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
+  box-shadow:
+    20px 20px 30px rgba(0, 0, 0, 0.7),
+    35px 35px 30px rgba(135, 135, 135, 0.7);
 }
 
 /* ===================================
@@ -896,22 +710,13 @@
 .business-impact-section img,
 .design-highlights-section img,
 .project-details-section img {
+    width: 100%;
   border-radius: 20px;
-  border: 1px solid transparent;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(90deg, #000000, #edb829, #edb602, #000000);
-  background-size: 300% 300%;
-  animation: borderAnimation 4s linear infinite;
-  padding: 5px; /* border thickness */
-}
+  object-fit: cover;
 
-@keyframes borderAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
+  box-shadow:
+    -20px 20px 30px rgba(0, 0, 0, 0.7),
+    -35px 35px 30px rgba(135, 135, 135, 0.7);
 }
 
 .project-standout-section {

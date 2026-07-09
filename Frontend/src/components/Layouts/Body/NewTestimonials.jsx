@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import "./Testimonials.css";
+import "./NewTestimonials.css";
 
-const Testimonials = () => {
+const NewTestimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
+  const [transition, setTransition] = useState(true);
   const [index, setIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
 
@@ -63,28 +64,34 @@ const Testimonials = () => {
   }, []);
 
   useEffect(() => {
-  if (testimonials.length === 0) return;
+  if (!testimonials.length) return;
 
   const interval = setInterval(() => {
-    setIndex((prev) => {
-      const maxIndex = Math.max(0, testimonials.length - visibleCards);
-
-      return prev >= maxIndex ? 0 : prev + 1;
-    });
-  }, 3000); // 3 seconds
+    setIndex((prev) => prev + 1);
+  }, 3000);
 
   return () => clearInterval(interval);
-}, [testimonials, visibleCards]);
+}, [testimonials]);
 
+useEffect(() => {
+  if (
+    testimonials.length &&
+    index >= testimonials.length
+  ) {
+    const timer = setTimeout(() => {
+      setTransition(false);
+      setIndex(0);
 
-  // Scroll left/right
-  // const scroll = (dir) => {
-  //   const maxIndex = testimonials.length - visibleCards;
-  //   let newIndex = dir === "left" ? index - 1 : index + 1;
-  //   if (newIndex < 0) newIndex = 0;
-  //   if (newIndex > maxIndex) newIndex = maxIndex;
-  //   setIndex(newIndex);
-  // };
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTransition(true);
+        });
+      });
+    }, 700);
+
+    return () => clearTimeout(timer);
+  }
+}, [index, testimonials.length]);
   const scroll = (dir) => {
   const maxIndex = Math.max(0, testimonials.length - visibleCards);
 
@@ -95,6 +102,10 @@ const Testimonials = () => {
   }
 };
 
+const sliderData =
+  testimonials.length > 0
+    ? [...testimonials, ...testimonials]
+    : [];
 
 
   return (
@@ -118,50 +129,76 @@ const Testimonials = () => {
             <FaChevronLeft />
           </button>
 
-          <div
-            className="testimonial-track"
+         <div
+  className="testimonial-track"
+  style={{
+    transition: transition
+      ? "transform .7s ease"
+      : "none",
+    transform: `translateX(-${
+      index * (100 / visibleCards)
+    }%)`,
+  }}
+>
+           {sliderData.map((t, i) => (
+            <div
+  className="testimonial-card"
+  key={i}
+  style={{
+  flex:
+    visibleCards === 1
+      ? "0 0 100%"
+      : `0 0 calc(${100 / visibleCards}% - 20px)`
+}}
+>
+  <div
+    className="quote-top"
+    style={{ color: t.color }}
+  >
+    ❝
+  </div>
+
+  <div
+    className="client-pill"
+    style={{ background: t.color }}
+  >
+    <div className="client-image">
+      <img src={t.image} alt={t.name} />
+    </div>
+
+    <div className="client-details">
+      <h4>{t.name}</h4>
+    </div>
+  </div>
+
+  <div className="testimonial-content">
+    <p>{t.review}</p>
+
+    <div className="card-line"></div>
+
+    <div className="testimonial-stars">
+      {Array(5)
+        .fill(0)
+        .map((_, j) => (
+          <span
+            key={j}
             style={{
-              transform: `translateX(-${index * (100 / visibleCards)}%)`,
+              color: j < t.rating ? t.color : "#ddd",
             }}
           >
-            {testimonials.map((t, i) => (
-              <div
-                className="testimonial-card"
-                key={i}
-                style={{
-                  flex:
-                    visibleCards === 1
-                      ? "0 0 auto"
-                      : `0 0 calc(${100 / visibleCards}% - 20px)`,
-                  height: "auto",
-                }}
-              >
-                <div className="quote-icon" style={{ color: t.color }}>
-                  “
-                </div>
-                <div className="testimonial-content">
-                  <h3 style={{ color: t.color }}>{t.name}</h3>
-                  <p className="review">{t.review}</p>
-                  <div className="testimonial-stars">
-                    {Array(5)
-                      .fill(0)
-                      .map((_, j) => (
-                        <span
-                          key={j}
-                          style={{ color: j < t.rating ? t.color : "#ccc" }}
-                        >
-                          ★
-                        </span>
-                      ))}
-                  </div>
-                </div>
-                <div
-                  className="user-icon"
-                  style={{ border: `6px solid ${t.color}` }}
-                >
-                  <img src={t.image} alt={t.name} />
-                </div>
-              </div>
+            ★
+          </span>
+        ))}
+    </div>
+  </div>
+
+  <div
+    className="quote-bottom"
+    style={{ color: t.color }}
+  >
+    ❞
+  </div>
+</div>
             ))}
           </div>
 
@@ -177,4 +214,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default NewTestimonials;

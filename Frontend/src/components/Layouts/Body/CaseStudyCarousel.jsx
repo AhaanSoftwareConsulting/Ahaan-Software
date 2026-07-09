@@ -8,16 +8,16 @@ import "./CaseStudyCarousel.css";
 const CaseStudyCarousel = () => {
 
   const slides = [
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/1.webp", link: "#" },
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/2.webp", link: "#" },
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/3.webp", link: "#" },
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/4.webp", link: "#" },
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/5.webp", link: "#" },
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/6.webp", link: "#" },
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/7.webp", link: "#" },
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/8.webp", link: "#" },
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/9.webp", link: "#" },
-    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/10.webp", link: "#" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/1.webp", link: "/case-studies" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/2.webp", link: "/case-studies" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/3.webp", link: "/case-studies" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/4.webp", link: "/case-studies" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/5.webp", link: "/case-studies" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/6.webp", link: "/case-studies" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/7.webp", link: "/case-studies" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/8.webp", link: "/case-studies" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/9.webp", link: "/case-studies" },
+    { img: "https://ahaanmedia.com/ahaanwebsite/casestudy/10.webp", link: "/case-studies" },
  
   ];
 
@@ -30,12 +30,9 @@ const CaseStudyCarousel = () => {
           <div className="col">
 
             <div className="section-header-tech">
-              <p className="subtitle">
-                view our portfolio <span className="divider"></span>
-              </p>
             </div>
 
-            <p className="title" style={{ textAlign: "left", color: "#fff" }}>
+            <p className="technology-title" style={{ textAlign: "left", color: "#fff" }}>
               Case Study
             </p>
 
@@ -98,7 +95,7 @@ const CaseStudyCarousel = () => {
 
         {/* 🔹 Right-Aligned Button */}
         <div className="view-all-btn d-flex justify-content-end mt-4 mb-4">
-          <a href="/portfolio" className="text-decoration-none">
+          <a href="/case-studies" className="text-decoration-none">
             View All →
           </a>
         </div>

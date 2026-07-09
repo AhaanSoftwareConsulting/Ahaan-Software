@@ -18,10 +18,11 @@ const CaseStudyCarousel = lazy(
   () => import("../../Layouts/Body/CaseStudyCarousel"),
 );
 const TestimonialCarousel = lazy(
-  () => import("../../Layouts/Body/Testimonials"),
+  () => import("../../Layouts/Body/NewTestimonials"),
 );
 const SecondBanner = lazy(() => import("../../Layouts/Body/SecondBanner"));
 import "./Home.css";
+// import ExtraHeroBanner from "./ExtraHeroBanner";
 const Home = () => {
   return (
     <div>
@@ -39,17 +40,19 @@ const Home = () => {
         }
       >
         <WhoWeAreSection />
+
+        {/* <ExtraHeroBanner /> */}
         <ServicesSection />
         <ThirdSection />
         <ConnectSection />
-        <TotalProject />      
-         <FirstSection />
+        <TotalProject />
+        <FirstSection />
         <WhyChooseUs />
         <ImageCarousel />
         <OurProcess />
         <CaseStudyCarousel />
         <TestimonialCarousel />
-        <Watermark/>
+        <Watermark />
         <SecondBanner />
       </Suspense>
     </div>

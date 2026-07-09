@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
@@ -7,15 +7,15 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-        
           if (id.includes('node_modules')) {
             if (id.includes('@lottiefiles')) return 'lottie-vendor';
             if (id.includes('leaflet')) return 'map-vendor';
-            return 'vendors'; 
+            return 'vendors';
           }
         },
       },
     },
-    chunkSizeWarningLimit: 1000, 
+    chunkSizeWarningLimit: 1000,
   },
-})
+});                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+

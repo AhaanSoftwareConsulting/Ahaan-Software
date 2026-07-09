@@ -1,0 +1,175 @@
+.case-studies-page {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+.case-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Card */
+
+.case-card {
+  background: #fff;
+  border: 1px solid #f5e4ae;
+  padding: 35px 25px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.35s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.case-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo Area */
+
+.case-card-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 5px;
+  border-radius: 6px;
+
+  background: #fff;
+}
+
+.case-logo {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+/* Content */
+
+.case-card-bottom {
+  padding: 0;
+  background: transparent;
+}
+
+.case-card-bottom h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: Capitalize;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+
+/* Description */
+
+.case-desc {
+  min-height: 90px;
+}
+
+.case-desc p {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: center;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Button */
+
+.case-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+
+  margin-top: 25px;
+
+  background: #000;
+  color: #fff;
+
+  text-decoration: none;
+
+  padding: 14px 24px;
+
+  border-radius: 50px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.case-btn:hover {
+  background: #cd8b28;
+  color: #000000;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .case-container {
+    padding: 0 20px;
+  }
+
+  .case-card {
+    padding: 30px 20px;
+  }
+
+  .case-card-bottom h3 {
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .case-studies-page {
+    padding: 50px 0;
+  }
+
+  .case-container {
+    padding: 0 15px;
+  }
+
+  .case-card {
+    padding: 25px 18px;
+  }
+
+  .case-card-top {
+    width: 80px;
+    height: 80px;
+  }
+
+  .case-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .case-card-bottom h3 {
+    font-size: 18px;
+  }
+
+  .case-desc {
+    min-height: auto;
+  }
+
+  .case-desc p {
+    font-size: 14px;
+  }
+
+  .case-btn {
+    width: 100%;
+  }
+}

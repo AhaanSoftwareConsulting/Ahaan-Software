@@ -189,7 +189,7 @@ const onSubmit = async (data) => {
               </li>
               <li>
                 <a href="/terms-conditions" className="text-decoration-none">
-                  <BsCheckLg className="quick-icon" /> Terms Conditions
+                  <BsCheckLg className="quick-icon" /> Terms & Conditions
                 </a>
               </li>
               <li>
@@ -260,7 +260,7 @@ const onSubmit = async (data) => {
               </li>
               <li>
                 <a href="/careers" className="text-decoration-none">
-                  <BsCheckLg className="quick-icon" /> Career
+                  <BsCheckLg className="quick-icon" /> Careers
                 </a>
               </li>
               <li>
@@ -393,7 +393,7 @@ const onSubmit = async (data) => {
                 rel="noopener noreferrer"
                 className="icon github"
               >
-                <span className="tooltip">Github</span>
+                <span className="tooltip">GitHub</span>
                 <FaGithub />
               </a>
                <a

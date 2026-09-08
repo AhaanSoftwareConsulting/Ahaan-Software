@@ -48,7 +48,7 @@ const Banner = () => {
             </div>
 
             <h3 className="vision-title">
-              Your Tech, Development And Creative Transformation Partner!
+              Your Technology, Development And Creative Transformation Partner
             </h3>
 
             <p className="description">

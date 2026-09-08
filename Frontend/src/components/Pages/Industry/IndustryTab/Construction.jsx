@@ -30,7 +30,7 @@ const Construction = () => {
     <div className="ecommerce-section container-fluid p-0">
       <h2 className="fw-bold">Streamline Construction Operations With Smart Digital Solutions!</h2>
       <p className="text-muted">
-        Achieve new level of agility with our tech-powered solutions, precisely tailored to the construction industry. Whether you're streamlining project management, optimizing resource allocation, or enhancing site safety, our custom solutions help you build smarter, faster, and safer! 
+        Achieve a new level of agility with our tech-powered solutions, precisely tailored to the construction industry. Whether you're streamlining project management, optimizing resource allocation, or enhancing site safety, our custom solutions help you build smarter, faster, and safer! 
       </p>
       
       <img 

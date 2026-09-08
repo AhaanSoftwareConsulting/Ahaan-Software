@@ -6,7 +6,7 @@ const gridcontent = [
   {
     imgSrc: "https://ahaanmedia.com/ahaanwebsite/Industry/grids-image1.webp",
     title: 'EHR Development',
-    description: 'Empower healthcare experts with seamless access to patient medical history, past treatments and diagnosis reports through our cutting-edge EHR or Electronic Health Records Development Services. As a leading software provider, we streamline healthcare operations with automated workflows, real-time patient insights, and more! '
+    description: 'Empower healthcare experts with seamless access to patient medical history, past treatments and diagnostic reports is reports through our cutting-edge EHR or Electronic Health Records Development Services. As a leading software provider, we streamline healthcare operations with automated workflows, real-time patient insights, and more! '
   },
   {
     imgSrc: "https://ahaanmedia.com/ahaanwebsite/Industry/grids-image2.webp",
@@ -47,7 +47,7 @@ const Healthcare = () => {
       </p>
 
       <h2 className="fw-bold text-start Revitalize mt-4 mb-4">
-        Your Business Needs To Stay Dynamic In A Ecosystem
+        Your Business Needs to Stay Dynamic In A Ecosystem
       </h2>
 
       {gridcontent.map((feature, index) => (

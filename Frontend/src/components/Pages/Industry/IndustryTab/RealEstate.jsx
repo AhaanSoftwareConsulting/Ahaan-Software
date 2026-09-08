@@ -38,7 +38,7 @@ const RealEstate = () => {
         Innovate. Elevate. Collaborate. Bring Your Real Estate Vision To Life!
       </h2>
       <p className="text-start text-muted">
-        Partner with us to enhance real estate operations with real-time monitoring, predictive maintenance, and smart building solutions. Leveraging IoT, mobile apps, and digital innovations, we forge customer satisfaction with elevated efficiency and excellence. Strengthen security with robust cybersecurity, access control, and cloud solutions to protect data, assets, and tenant privacy.
+        Partner with us to enhance real estate operations with real-time monitoring, predictive maintenance, and smart building solutions. Leveraging IoT, mobile apps, and digital innovations, we improve customer satisfaction with elevated efficiency and excellence. Strengthen security with robust cybersecurity, access control, and cloud solutions to protect data, assets, and tenant privacy.
       </p>
 
       <h2 className="fw-bold text-start Revitalize mt-4 mb-4">

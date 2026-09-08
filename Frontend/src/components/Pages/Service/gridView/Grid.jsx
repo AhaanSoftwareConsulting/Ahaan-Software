@@ -28,11 +28,11 @@ const cardData = [
     description:
       "UI/UX demands a deep understanding of online customer behaviour and continuous testing. With real market insights from diverse projects, we craft dynamic websites and mobile apps that deliver seamless, engaging brand interactions.",
     features: [
-      "Graphic",
+      "Graphic Design",
       "Wireframing",
-      "Web app",
+      "Web apps",
       "Architecture",
-      "Mobile App",
+      "Mobile Apps",
     ],
     icons: [
       "https://ahaanmedia.com/ahaanwebsite/technology/Adobe.webp",
@@ -55,7 +55,7 @@ const cardData = [
       "API & Integration",
       "WordPress",
       "Shopify",
-      "Mern Stack",
+      "MERN Stack",
     ],
     icons: [
       "https://ahaanmedia.com/ahaanwebsite/technology/Next.webp",
@@ -100,7 +100,7 @@ const cardData = [
     image: "https://ahaanmedia.com/ahaanwebsite/Service/card5.webp",
     title: "Social Media Management",
     description:
-      "We go beyond likes, comments, and shares to craft well-researched, insight-driven, and sustainable content strategies that truly resonate with your audience. Trust us to spark meaningful conversations, foster a genuine community, and make real impact!",
+      "We go beyond likes, comments, and shares to craft well-researched, insight-driven, and sustainable content strategies that truly resonate with your audience. Trust us to spark meaningful conversations, foster a genuine community, and make a real impact!",
     features: [
       "Instagram Marketing",
       "LinkedIn Marketing",

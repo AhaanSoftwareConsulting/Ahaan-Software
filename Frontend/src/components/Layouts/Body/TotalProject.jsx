@@ -5,25 +5,25 @@ import { FaAward } from "react-icons/fa6";
  
 const stats = [
   {
-    value: 5,
-    label: "International Awards",
+    value: 6,
+    label: "Years of Experience",
     icon: <FaAward />,
     colorClass: "process-step-1-color",
   },
   {
-    value: 30,
-    label: "Our Teams",
+    value: 25,
+    label: "Team Members",
     icon: <FaUsers />,
     colorClass: "process-step-2-color",
   },
   {
-    value: 100,
+    value: 65,
     label: "Completed Projects",
     icon: <FaCheckCircle />,
     colorClass: "process-step-3-color",
   },
   {
-    value: 125,
+    value: 52,
     label: "Happy Clients",
     icon: <FaSmile />,
     colorClass: "process-step-4-color",

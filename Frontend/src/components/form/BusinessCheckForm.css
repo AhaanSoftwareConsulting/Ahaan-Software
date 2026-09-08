@@ -375,13 +375,13 @@
     height: 40px;
     transform-origin: left center;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 15px;
+    padding-right: -55px;
     pointer-events: none;
 }
 
@@ -392,3 +392,56 @@
 .abc-wheelLabel-3 { transform: translateY(-50%) rotate(180deg); }
 .abc-wheelLabel-4 { transform: translateY(-50%) rotate(240deg); }
 .abc-wheelLabel-5 { transform: translateY(-50%) rotate(300deg); }
+
+.abc-claimCard {
+    margin-top: 20px;
+    padding: 22px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #fff8e8, #ffffff);
+    border: 1px solid #f1d48a;
+    text-align: center;
+}
+
+.abc-claimSuccess {
+    margin: 0 0 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #16803c;
+}
+
+.abc-claimMessage {
+    color: #333;
+    line-height: 1.6;
+}
+
+.abc-claimMessage p {
+    margin: 8px 0;
+}
+
+.abc-companyDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.abc-companyDetails strong {
+    font-size: 17px;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.abc-companyDetails span {
+    font-size: 14px;
+    color: #555;
+}
+
+.abc-thankYou {
+    font-weight: 600;
+    color: #555;
+    margin-top: 18px !important;
+}

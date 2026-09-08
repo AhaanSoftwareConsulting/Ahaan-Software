@@ -4,12 +4,12 @@ import { createBusinessCheck, spinBusinessCheck } from "../../Api/formApi";
 import "./BusinessCheckForm.css";
 
 const WHEEL_PRIZES = [
-    "Website Audit",
-    "15% Off",
-    "Logo Refresh",
-    "Strategy Call",
-    "Free Domain",
-    "10% Off",
+    "🎁 FREE WEBSITE AUDIT",
+    "☕ COFFEE WITH VISHAL",
+    "🎨 FREE LOGO REFRESH",
+    "📞 FREE 15-MIN CONSULTATION",
+    "💡 FREE BUSINESS WEBSITE TIP",
+    "🎁 MYSTERY AHAAN GIFT",
 ];
 
 const IMPROVEMENT_OPTIONS = [
@@ -236,22 +236,22 @@ const BusinessCheckForm = () => {
                         <div className="abc-step">
                             <label className="abc-field">
                                 <span>Your name *</span>
-                                <input value={form.name} onChange={(e) => update("name", e.target.value)} placeholder="e.g. Rohan Mehta" />
+                                <input value={form.name} onChange={(e) => update("name", e.target.value)} placeholder="e.g. Vishal Jaiswal" />
                                 {errors.name && <em>{errors.name}</em>}
                             </label>
                             <label className="abc-field">
                                 <span>Business / company name *</span>
-                                <input value={form.business} onChange={(e) => update("business", e.target.value)} placeholder="e.g. Mehta Textiles" />
+                                <input value={form.business} onChange={(e) => update("business", e.target.value)} placeholder="e.g. Ahaan Software Consulting" />
                                 {errors.business && <em>{errors.business}</em>}
                             </label>
                             <label className="abc-field">
                                 <span>WhatsApp / mobile number *</span>
-                                <input value={form.mobile} onChange={(e) => update("mobile", e.target.value)} placeholder="+91 90000 00000" />
+                                <input value={form.mobile} onChange={(e) => update("mobile", e.target.value)} placeholder="+91 983-037-1143" />
                                 {errors.mobile && <em>{errors.mobile}</em>}
                             </label>
                             <label className="abc-field">
                                 <span>Email address *</span>
-                                <input type="email" value={form.email} onChange={(e) => update("email", e.target.value)} placeholder="you@business.com" />
+                                <input type="email" value={form.email} onChange={(e) => update("email", e.target.value)} placeholder="you@ahaansoftware.com" />
                                 {errors.email && <em>{errors.email}</em>}
                             </label>
                         </div>
@@ -448,23 +448,49 @@ const BusinessCheckForm = () => {
 
                         {spinError && <p className="abc-error">{spinError}</p>}
 
-                        {!prizeWon ? (
-                            <button className="abc-btn abc-btn-primary" onClick={spinWheel} disabled={spinning || alreadySpun}>
-                                {spinning ? "Spinning…" : "Spin now"}
-                            </button>
-                        ) : (
-                            <div className="abc-prizeResult">
-                                <p className="abc-prizeLabel">You won:</p>
-                                <p className="abc-prizeName">{prizeWon.label} 🎁</p>
-                                <p className="abc-hint">
-                                    Your prize has been saved successfully. 🎉
-                                </p>
+                      {!prizeWon ? (
+    <button
+        className="abc-btn abc-btn-primary"
+        onClick={spinWheel}
+        disabled={spinning || alreadySpun}
+    >
+        {spinning ? "Spinning…" : "Spin now"}
+    </button>
+) : (
+    <div className="abc-prizeResult">
+        <p className="abc-prizeLabel">You won:</p>
+        <p className="abc-prizeName">{prizeWon.label} 🎁</p>
 
-                                <button className="abc-btn abc-btn-primary" onClick={resetAll}>
-                                    Done
-                                </button>
-                            </div>
-                        )}
+        <div className="abc-claimCard">
+            <p className="abc-claimSuccess">
+                Your prize has been saved successfully. 🎉
+            </p>
+
+            <div className="abc-claimMessage">
+                <p>
+                    📸 <strong>Take a screenshot of this screen.</strong>
+                </p>
+
+                <p>Show this screen to Vishal to claim your gift.</p>
+
+                <div className="abc-companyDetails">
+                    <strong>Ahaan Software Consulting</strong>
+                    <span>📞 +91 98303 71143</span>
+                    <span>🌐 www.ahaansoftware.com</span>
+                </div>
+
+                <p className="abc-thankYou">
+                    Thank you for being part of the Ahaan experience! ❤️
+                </p>
+            </div>
+        </div>
+
+        <button className="abc-btn abc-btn-primary" onClick={resetAll}>
+            Done
+        </button>
+    </div>
+)}
+
                     </div>
                 </div>
             )}

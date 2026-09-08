@@ -15,14 +15,14 @@ export const createBusinessCheck = async (data) => {
         throw error;
     }
 }
-export const spinBusinessCheck = async (data) => {
-    try {
-        const response = await API.post("/business-check/spin", { email })
-        return response.data;
-    }
-    catch (error) {
-        console.error("❌ Error spinning:", error);
-        throw error;
-    }
-}
+export const spinBusinessCheck = async (email) => {
+  try {
+    const response = await API.post("/business-check/spin", { email });
+    return response.data; // { prize: "Free Website Audit" }
+  } catch (error) {
+    // backend should respond 409 if this email already spun
+    console.error("❌ Error spinning:", error);
+    throw error;
+  }
+};
 export default API;

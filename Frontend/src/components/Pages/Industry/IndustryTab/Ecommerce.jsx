@@ -25,7 +25,7 @@ const gridcontent = [
   },
   {
     imgSrc: "https://ahaanmedia.com/ahaanwebsite/Industry/RedefineBuyingExperience.webp",
-    title: 'Redefine Buying Experience ',
+    title: 'Redefine the Buying Experience ',
     description: 'Leverage AI-powered product search to display personalized buying options based on user activity, improving their overall shopping experience with custom-tailored recommendations.'
   }
 ];
@@ -45,7 +45,7 @@ const Ecommerce = () => {
       />
 
       <h2 className="fw-bold text-start Revitalize mt-3">
-        Unlock Your Retail Business’ Full Potential 
+        Unlock Your Retail Business’s Full Potential 
       </h2>
       <p className="text-start text-muted">
         Whether you need an e-commerce app to enhance B2C engagement, a B2B portal to connect manufacturers and wholesalers, or a powerful retail ERP to streamline operations, we’ve got you covered! Partner with us to expand your e-business reach and grow your market share with scalable, flexible e-commerce solutions!

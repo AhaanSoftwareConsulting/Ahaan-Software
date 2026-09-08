@@ -17,7 +17,7 @@ const gridcontent = [
   },
   {
     imgSrc: "https://ahaanmedia.com/ahaanwebsite/Industry/grids-image3.webp",
-    title: "Digital Right Management ",
+    title: "Digital Rights Management ",
     description:
       "Protect your intellectual property, guarantee compliance with licensing agreements, and prevent copyright infringements with our cutting-edge DRM solutions. Stay secure with industry-leading protection from our expert team.",
   },

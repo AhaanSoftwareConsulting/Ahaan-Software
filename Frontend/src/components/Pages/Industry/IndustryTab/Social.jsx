@@ -42,7 +42,7 @@ const Social = () => {
         Connect, Curate, And Communicate!   
       </h2>
       <p className="text-left text-muted">
-        We help you tap beyond the social media boundaries. Leveraging next-gen technologies including, AI, Blockchain, and the metaverse, we maximize user engagement, streamline content moderation, and guarantee data privacy—creating a thriving and safe digital ecosystem. 
+        We help you tap beyond the social media boundaries. Leveraging next-gen technologies including, AI, blockchain, and the metaverse, we maximize user engagement, streamline content moderation, and guarantee data privacy—creating a thriving and safe digital ecosystem. 
       </p>
 
       <h2 className="fw-bold text-left Revitalize mt-4 mb-4">

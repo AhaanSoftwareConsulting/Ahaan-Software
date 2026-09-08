@@ -13,7 +13,7 @@ const NewTestimonials = () => {
     const fetchTestimonials = async () => {
       try {
         const response = await fetch(
-          "https://ahaan-admin.ahaanmedia.com/wp-json/wp/v2/testimonial"
+          "https://ahaan-admin.ahaanmedia.com/wp-json/wp/v2/testimonial",
         );
 
         const data = await response.json();
@@ -24,7 +24,7 @@ const NewTestimonials = () => {
 
             if (item.acf?.client_image) {
               const mediaRes = await fetch(
-                `https://ahaan-admin.ahaanmedia.com/wp-json/wp/v2/media/${item.acf.client_image}`
+                `https://ahaan-admin.ahaanmedia.com/wp-json/wp/v2/media/${item.acf.client_image}`,
               );
 
               const mediaData = await mediaRes.json();
@@ -38,7 +38,7 @@ const NewTestimonials = () => {
               color: item.acf?.color || "#2196F3",
               image: imageUrl,
             };
-          })
+          }),
         );
         setTestimonials(formattedData);
       } catch (error) {
@@ -64,49 +64,43 @@ const NewTestimonials = () => {
   }, []);
 
   useEffect(() => {
-  if (!testimonials.length) return;
+    if (!testimonials.length) return;
 
-  const interval = setInterval(() => {
-    setIndex((prev) => prev + 1);
-  }, 3000);
+    const interval = setInterval(() => {
+      setIndex((prev) => prev + 1);
+    }, 3000);
 
-  return () => clearInterval(interval);
-}, [testimonials]);
+    return () => clearInterval(interval);
+  }, [testimonials]);
 
-useEffect(() => {
-  if (
-    testimonials.length &&
-    index >= testimonials.length
-  ) {
-    const timer = setTimeout(() => {
-      setTransition(false);
-      setIndex(0);
+  useEffect(() => {
+    if (testimonials.length && index >= testimonials.length) {
+      const timer = setTimeout(() => {
+        setTransition(false);
+        setIndex(0);
 
-      requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          setTransition(true);
+          requestAnimationFrame(() => {
+            setTransition(true);
+          });
         });
-      });
-    }, 700);
+      }, 700);
 
-    return () => clearTimeout(timer);
-  }
-}, [index, testimonials.length]);
+      return () => clearTimeout(timer);
+    }
+  }, [index, testimonials.length]);
   const scroll = (dir) => {
-  const maxIndex = Math.max(0, testimonials.length - visibleCards);
+    const maxIndex = Math.max(0, testimonials.length - visibleCards);
 
-  if (dir === "left") {
-    setIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  } else {
-    setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  }
-};
+    if (dir === "left") {
+      setIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+    } else {
+      setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    }
+  };
 
-const sliderData =
-  testimonials.length > 0
-    ? [...testimonials, ...testimonials]
-    : [];
-
+  const sliderData =
+    testimonials.length > 0 ? [...testimonials, ...testimonials] : [];
 
   return (
     <div className="container section-header-tech">
@@ -114,11 +108,11 @@ const sliderData =
         Testimonials <span className="divider"></span>
       </h6>
       <h2 className="technology-title">What Our Clients Say</h2>
-      <p className="image-carousel-content"  >
-        Driven to be future-ready, and push beyond the building blocks of
-        technology, digital, and marketing, Ahaan Software Consulting proudly
-        participated in The Asia Business Show 2024 in Singapore—the powerhouse
-        of innovation and enterprise!
+      <p className="image-carousel-content">
+        We help businesses become future-ready and move beyond the building
+        blocks of technology, digital, and marketing, Ahaan Software Consulting
+        proudly participated in The Asia Business Show 2024 in Singapore—the
+        powerhouse of innovation and enterprise!
       </p>
       <div className="testimonial-slider">
         <div className="testimonial-wrapper">
@@ -129,76 +123,63 @@ const sliderData =
             <FaChevronLeft />
           </button>
 
-         <div
-  className="testimonial-track"
-  style={{
-    transition: transition
-      ? "transform .7s ease"
-      : "none",
-    transform: `translateX(-${
-      index * (100 / visibleCards)
-    }%)`,
-  }}
->
-           {sliderData.map((t, i) => (
-            <div
-  className="testimonial-card"
-  key={i}
-  style={{
-  flex:
-    visibleCards === 1
-      ? "0 0 100%"
-      : `0 0 calc(${100 / visibleCards}% - 20px)`
-}}
->
-  <div
-    className="quote-top"
-    style={{ color: t.color }}
-  >
-    ❝
-  </div>
-
-  <div
-    className="client-pill"
-    style={{ background: t.color }}
-  >
-    <div className="client-image">
-      <img src={t.image} alt={t.name} />
-    </div>
-
-    <div className="client-details">
-      <h4>{t.name}</h4>
-    </div>
-  </div>
-
-  <div className="testimonial-content">
-    <p>{t.review}</p>
-
-    <div className="card-line"></div>
-
-    <div className="testimonial-stars">
-      {Array(5)
-        .fill(0)
-        .map((_, j) => (
-          <span
-            key={j}
+          <div
+            className="testimonial-track"
             style={{
-              color: j < t.rating ? t.color : "#ddd",
+              transition: transition ? "transform .7s ease" : "none",
+              transform: `translateX(-${index * (100 / visibleCards)}%)`,
             }}
           >
-            ★
-          </span>
-        ))}
-    </div>
-  </div>
+            {sliderData.map((t, i) => (
+              <div
+                className="testimonial-card"
+                key={i}
+                style={{
+                  flex:
+                    visibleCards === 1
+                      ? "0 0 100%"
+                      : `0 0 calc(${100 / visibleCards}% - 20px)`,
+                }}
+              >
+                <div className="quote-top" style={{ color: t.color }}>
+                  ❝
+                </div>
 
-  <div
-    className="quote-bottom"
-    style={{ color: t.color }}
-  >
-    ❞
-  </div>
-</div>
+                <div className="client-pill" style={{ background: t.color }}>
+                  <div className="client-image">
+                    <img src={t.image} alt={t.name} />
+                  </div>
+
+                  <div className="client-details">
+                    <h4>{t.name}</h4>
+                  </div>
+                </div>
+
+                <div className="testimonial-content">
+                  <p>{t.review}</p>
+
+                  <div className="card-line"></div>
+
+                  <div className="testimonial-stars">
+                    {Array(5)
+                      .fill(0)
+                      .map((_, j) => (
+                        <span
+                          key={j}
+                          style={{
+                            color: j < t.rating ? t.color : "#ddd",
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                  </div>
+                </div>
+
+                <div className="quote-bottom" style={{ color: t.color }}>
+                  ❞
+                </div>
+              </div>
             ))}
           </div>
 

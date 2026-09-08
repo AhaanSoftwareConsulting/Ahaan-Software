@@ -33,7 +33,7 @@ const Education = () => {
       />
 
       <h2 className="fw-bold text-start Revitalize mt-3">
-        Take Education To A New Height Of Excellence!
+        Take Education to A New Height Of Excellence!
       </h2>
       <p className="text-start text-muted">
         At Ahaan Software Consulting, we go beyond being just an e-learning solution partner—we redefine the learning experience for educators, trainers, and students with our innovative, user-friendly EdTech solutions.

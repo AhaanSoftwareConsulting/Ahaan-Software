@@ -85,7 +85,7 @@ const TabBar = () => {
             Technology Use <span className="divider"></span>
           </h6>
 
-          <h2 className="technology-title">Our Technology Use</h2>
+          <h2 className="technology-title">Technologies We Use</h2>
 
           <p className="image-carousel-content">
             The success of our services depends on a perfectly laid-out process

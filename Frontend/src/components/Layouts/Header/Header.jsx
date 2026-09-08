@@ -76,7 +76,7 @@ const Header = () => {
             </li>
             <li>
               <a href="/about" className="nav-link">
-                About
+                About Us
               </a>
             </li>
             <li>
@@ -151,7 +151,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 className="get-quote-btn"
               >
-                Book a Free Discovery Call
+                Book a Discovery Call
               </a>
             </div>
           </div>

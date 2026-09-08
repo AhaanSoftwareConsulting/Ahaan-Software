@@ -41,7 +41,7 @@ const AboutSection = () => {
           24/7 Support <span className="divider"></span>
         </h6>
             <h2 className="about-title">
-              Highly Tailored Technology, Develop & Support Services.
+              Highly Tailored Technology Development and Support Services
             </h2>
             <p className="about-description">
               Accelerate innovation with world-class tech teams. We’ll match
@@ -50,9 +50,9 @@ const AboutSection = () => {
             </p>
 
             <ul className="about-list list-unstyled">
-              <li><BsCheckCircleFill className="check-icon" /> Website & Mobile application design & Development</li>
-              <li><BsCheckCircleFill className="check-icon" /> Dramatically re-engineer value added IT systems via mission</li>
-              <li><BsCheckCircleFill className="check-icon" /> Professional User Experience & Interface researching</li>
+              <li><BsCheckCircleFill className="check-icon" /> Website and Mobile Application Design and Development</li>
+              <li><BsCheckCircleFill className="check-icon" /> Design and modernize IT systems to improve operational efficiency, scalability, and business value.</li>
+              <li><BsCheckCircleFill className="check-icon" /> User Experience Research and Interface Design</li>
             </ul>
 
           

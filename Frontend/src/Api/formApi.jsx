@@ -1,13 +1,13 @@
 import axios from "axios";
 
 // const BASE_URL = "http://localhost:5000/api";
-const BASE_URL = "https://ahaan-software-consulting-llp.onrender.com"
+const BASE_URL = "https://ahaan-software-consulting-llp.onrender.com/api"
 
 const API = axios.create({ baseURL: BASE_URL })
 
 export const createBusinessCheck = async (data) => {
     try {
-        const response = await API.post("/bussiness-check", data);
+        const response = await API.post("/business-check", data);
         return response.data
     }
     catch (error) {
@@ -17,7 +17,7 @@ export const createBusinessCheck = async (data) => {
 }
 export const spinBusinessCheck = async (data) => {
     try {
-        const response = await API.post("/bussiness-check/spin", { email })
+        const response = await API.post("/business-check/spin", { email })
         return response.data;
     }
     catch (error) {

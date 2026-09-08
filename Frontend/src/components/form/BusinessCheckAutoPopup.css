@@ -1,0 +1,84 @@
+.bap-reopen {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f2a93b;
+  color: #1b2a4a;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 24px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+  z-index: 1500;
+}
+
+.bap-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 16, 32, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2000;
+  animation: bap-fadeIn 0.25s ease;
+}
+
+.bap-panel {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 92vh;
+  overflow-y: auto;
+  border-radius: 18px;
+  background: #ffffff;
+  animation: bap-scaleIn 0.3s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+/* Nested form already ships its own card chrome — collapse the outer
+   wrapper's padding/background so it doesn't double up inside the panel */
+.bap-panel .abc-wrap {
+  padding: 0;
+  background: transparent;
+  min-height: 0;
+}
+.bap-panel .abc-card {
+  box-shadow: none;
+  border: none;
+  border-radius: 18px;
+}
+
+.bap-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #f5f7fa;
+  color: #1b2a4a;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+.bap-close:hover { background: #e9edf5; }
+
+@keyframes bap-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes bap-scaleIn {
+  from { opacity: 0; transform: scale(0.94) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bap-overlay, .bap-panel { animation: none; }
+}

@@ -35,6 +35,10 @@ const Blog = React.lazy(() => import("./components/Pages/Blog/Blog"));
 const Portfolios = React.lazy(() => import("./components/Pages/Portfolio/Portfolios"));
 const ContactUs = React.lazy(() => import("./components/Pages/Contact/ContactUs"));
 const CareerComponent = React.lazy(() => import("./components/Pages/Career/CareerComponent"));
+const BusinessCheckAutoPopup = React.lazy(
+  () => import("./components/form/BusinessCheckAutoPopup")
+);
+
 
 const PageLoader = () => (
   <div style={{
@@ -98,6 +102,12 @@ const AppContent = () => {
       </Suspense>
 
       {!hideHeaderFooterRoutes.includes(location.pathname) && <Footer />}
+
+       {location.pathname === "/" && (
+        <Suspense fallback={null}>
+          <BusinessCheckAutoPopup />
+        </Suspense>
+      )}
     </>
   );
 };

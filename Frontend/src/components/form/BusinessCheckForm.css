@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap");
+
+.abc-wrap {
+  --ink: #1b2a4a;
+  --ink-soft: #4a5773;
+  --amber: #f2a93b;
+  --amber-deep: #d98f1f;
+  --teal: #2d9c8a;
+  --paper: #f5f7fa;
+  --line: #dfe4ee;
+  --danger: #c0432f;
+
+  font-family: "Inter", -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  padding: 48px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.abc-card {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 40px 36px;
+  box-shadow: 0 24px 60px -32px rgba(27, 42, 74, 0.35);
+}
+
+.abc-header { margin-bottom: 28px; }
+
+.abc-kicker {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--amber-deep);
+  margin: 0 0 10px;
+}
+
+.abc-header h1 {
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  max-width: 22ch;
+}
+
+.abc-sub {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 46ch;
+}
+
+.abc-progress {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.abc-dot {
+  height: 5px;
+  flex: 1;
+  border-radius: 3px;
+  background: var(--line);
+  transition: background 0.3s ease;
+}
+.abc-dot.is-active { background: var(--amber); }
+
+.abc-step { display: flex; flex-direction: column; gap: 20px; }
+
+.abc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.abc-field > span,
+.abc-field legend {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+  padding: 0;
+}
+
+.abc-hint { font-size: 13px; color: var(--ink-soft); margin: -4px 0 4px; }
+
+.abc-field input[type="text"],
+.abc-field input[type="email"],
+.abc-field input:not([type="radio"]):not([type="checkbox"]),
+.abc-field textarea {
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--ink);
+  background: var(--paper);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.abc-field input:focus,
+.abc-field textarea:focus {
+  border-color: var(--amber-deep);
+}
+
+.abc-field em {
+  font-style: normal;
+  color: var(--danger);
+  font-size: 12.5px;
+}
+
+.abc-radio, .abc-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14.5px;
+  color: var(--ink);
+  padding: 10px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.abc-radio:hover, .abc-check:hover { border-color: var(--amber); }
+.abc-radio input, .abc-check input { margin-top: 3px; accent-color: var(--amber-deep); }
+
+.abc-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.abc-btn {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  border-radius: 10px;
+  padding: 13px 22px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.15s ease;
+}
+.abc-btn:active { transform: scale(0.98); }
+.abc-btn:disabled { opacity: 0.6; cursor: default; }
+
+.abc-btn-primary {
+  background: var(--amber);
+  color: var(--ink);
+  flex: 1;
+}
+.abc-btn-primary:hover:not(:disabled) { background: var(--amber-deep); color: #fff; }
+
+.abc-btn-ghost {
+  background: transparent;
+  color: var(--ink-soft);
+  border: 1.5px solid var(--line);
+}
+
+.abc-error { color: var(--danger); font-size: 13.5px; margin-top: 12px; }
+
+.abc-noObligation {
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-top: 18px;
+}
+
+/* ---- Modals ---- */
+.abc-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 42, 74, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.abc-modal {
+  background: #fff;
+  border-radius: 18px;
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.abc-modal h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+.abc-modal p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.5; margin: 0 0 10px; }
+
+.abc-spinTeaser { color: var(--amber-deep); font-weight: 600; margin-top: 16px; }
+
+.abc-modal .abc-btn { width: 100%; margin-top: 8px; }
+
+/* ---- Spin wheel ---- */
+.abc-wheelBox {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 20px auto 24px;
+}
+
+.abc-pointer {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 18px solid var(--ink);
+  z-index: 2;
+}
+.abc-wheel {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 6px solid #1b2a4a;
+
+  background:
+    conic-gradient(
+      #f2a93b 0deg 60deg,
+      #1b2a4a 60deg 120deg,
+      #2d9c8a 120deg 180deg,
+      #f2a93b 180deg 240deg,
+      #1b2a4a 240deg 300deg,
+      #2d9c8a 300deg 360deg
+    );
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(27, 42, 74, 0.25);
+}
+
+.abc-wheelLabel {
+  position: absolute;
+
+  width: 65px;
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.15;
+
+  text-align: center;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+/* 1 - top */
+.abc-wheelLabel-0 {
+  top: 20px;
+  left: 77px;
+}
+
+/* 2 - top right */
+.abc-wheelLabel-1 {
+  top: 65px;
+  right: 8px;
+}
+
+/* 3 - bottom right */
+.abc-wheelLabel-2 {
+  bottom: 45px;
+  right: 5px;
+}
+
+/* 4 - bottom */
+.abc-wheelLabel-3 {
+  bottom: 15px;
+  left: 77px;
+}
+
+/* 5 - bottom left */
+.abc-wheelLabel-4 {
+  bottom: 45px;
+  left: 5px;
+}
+
+/* 6 - top left */
+.abc-wheelLabel-5 {
+  top: 65px;
+  left: 8px;
+}
+
+
+.abc-prizeResult { margin-top: 4px; }
+.abc-prizeLabel { font-size: 13px; color: var(--ink-soft); margin-bottom: 2px; }
+.abc-prizeName {
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+@media (max-width: 480px) {
+  .abc-card { padding: 28px 22px; }
+  .abc-header h1 { font-size: 23px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .abc-wheel { transition: none !important; }
+}
+
+/* Container for the wheel */
+.abc-wheelBox {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 20px auto;
+}
+
+/* The pointer at the top */
+.abc-pointer {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #ffffff;
+    z-index: 10;
+}
+
+/* The spinning wheel circle */
+.abc-wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #f3b583;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* Example background using conic-gradient for 6 slices (60deg each) */
+    background: conic-gradient(
+        #1e293b 0deg 60deg,
+        #f2a93b 60deg 120deg,
+        #1e293b 120deg 180deg,
+        #f2a93b 180deg 240deg,
+        #1e293b 240deg 300deg,
+        #f2a93b 300deg 360deg
+    );
+}
+
+/* Base style for text labels inside slices */
+.abc-wheelLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 40px;
+    transform-origin: left center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    pointer-events: none;
+}
+
+/* Position each of the 6 items evenly (360deg / 6 = 60deg) */
+.abc-wheelLabel-0 { transform: translateY(-50%) rotate(0deg); }
+.abc-wheelLabel-1 { transform: translateY(-50%) rotate(60deg); }
+.abc-wheelLabel-2 { transform: translateY(-50%) rotate(120deg); }
+.abc-wheelLabel-3 { transform: translateY(-50%) rotate(180deg); }
+.abc-wheelLabel-4 { transform: translateY(-50%) rotate(240deg); }
+.abc-wheelLabel-5 { transform: translateY(-50%) rotate(300deg); }
